@@ -1,9 +1,8 @@
-# buysomepi.com Design Document
+# Buy Some Pi.com Design Document
 
 ## PRIMARY GOAL FOR ALL DESIGN AND IMPLEMENTATION
 
 - SELL NFTS
-- SELL ADS
 - DISPLAY ADS
 
 ## How it works
@@ -34,93 +33,41 @@
 
 1. Home Page (`/`)
    - Ticker bar showing app stats
-     - Total Pi Slice Sold
-     - Pi Slice Remaining
+     - Total Pi Slices Sold
+     - Pi Slices Remaining
      - Latest Pi Slice Purchased (e.g., "Pi Slice #xxxxx just purchased!")
      - Total Active Ads
      - Total Ad Impressions Served
      - Number of Unique Pi Owners
-     - Premium Pi Slice Remaining
+     - Standard, Patterned, Mathematical, Cultural, and Ultra-Rare Pi Slices Remaining
      - Total Value Locked (USD Estimate - Sum of purchase prices)
      - Most Recently Added Ad
      - Random NFTs Minted by buysomepi.com
    - Search box for finding specific Pi Slice
-   - Premium Pi Gallery (showcase of Premium Pi Numbers)
+   - Buy Some Pi button (select tier > purchase > provide ad content > checkout flow > display NFT at unique URL)
    - Pi Gallery (paged results, filterable, searchable)
-   - NFT Cards (Previous, Latest, Featured, Random, Next)
+   - NFT Cards Navigation (Previous, Latest, Featured, Random, Next)
 
-2. Cart (`/cart`)
-   - List of Pi Slice in cart
-   - Bundle discount calculation
-   - Bundle suggestions
-   - Checkout flow
-   - NFT Cards (Previous, Latest, Featured, Random, Next)
-
-4. User Dashboard (`/dashboard`)
+2. User Dashboard (`/dashboard`)
    - Owned Pi Slice
    - Ad management
    - Transaction history
-   - Referral stats
    - NFT Cards (Previous, Latest, Featured, Random, Next)
 
-5. Ad Manager (`/dashboard/ads/:index`)
-   - Ad image upload
-   - Target URL setting
-   - Ad preview
-   - Moderation status
-   - NFT Cards (Previous, Latest, Featured, Random, Next)
-
-6. Admin Panel (`/admin`)
+3. Admin Panel (`/admin`)
    - Ad moderation queue
    - User management
    - Pi Slice reservation tool
    - Analytics dashboard
 
-7. About Page (`/about`)
+4. Terms of Service Page (`/terms`)
 
-8. Terms of Service Page (`/terms`)
-
-9. FAQ Page (`/faq`)
+5. FAQ Page (`/faq`)
 
 ## Revenue
 
-- Primary sales 1 USD per NFT + 5% secondary market royalties on all NFT resales.
-- Price Tiers:
-    * Standard Pi Slice: $1 each
-    * Premium for special and notable numbers (fixed, varied pricing per NFT)
-- Purchase random NFT for .5 USD
+- Primary sales per NFT + 5% secondary market royalties on all NFT resales.
 - Resell of randomly minted NFT by buysomepi.com
-
-## Features
-
-### Core Product Features
-
-#### 1. Digital Pi Slice Ownership
-- Own individual Pi Slice as NFTs on the Solana blockchain
-- Each Pi Slice has a unique position in the Pi sequence, creating scarcity and uniqueness
-- Ownership is verifiable on-chain and transferable via standard NFT marketplaces
-
-#### 2. Premium Pi Numbers
-- Special collection of mathematically, historically, or culturally significant Pi positions
-- Fixed premium pricing based on significance and rarity
-- Enhanced metadata with historical context and mathematical importance
-- Featured placement in the Premium Pi Gallery on the homepage
-- Special visual treatment for notable Pi Slice (golden borders, badges, etc.)
-
-#### 3. Advertising Platform
-- Place ads (can be any content, not just an "ad") on owned Pi Slice visible to site visitors
-- Automated content moderation with Hive API
-- Performance metrics including views and clicks
-
-#### 4. Blockchain Integration
-- Transparent on-chain verification of ownership
-- Secure NFT minting through Metaplex Candy Machine
-- Multiple payment options (credit card via Stripe, direct SOL payments)
-- MoonPay integration for easy crypto onboarding
-
-#### 5. Random Purchases
-- User can hit "Feeling Lucky" button to purchase and mint a randomly selected NFT for .50 USD
-- On every purchase, the system has a 50% chance to mint a randomly selected NFT (owned by buysomepi.com)
 
 ## Core Architecture
 
@@ -164,7 +111,6 @@
 *   API Source: The Pi API (api.pi.delivery) provides programmatic access to millions of Pi Slice. Example: `https://api.pi.delivery/v1/pi?start=1&numberOfSlices=10` returns "1415926535".
 *   Data Storage: We'll store the full million Pi Slice in our database, with each Pi Slice having a unique index, NFT status, and advertising data. No need for on-the-fly calculations or external API dependencies after initial population.
 *   Batch Processing: During setup, we'll fetch and store Pi data in batches (e.g., 1000 Pi Slice per API call) to populate our database efficiently.
-
 
 ### Database Schema
 
@@ -686,21 +632,6 @@ A clean, minimalist foundation that prioritizes mathematical precision, with str
 - **Buttons**: Minimalist buttons with clear states (hover/pressed)
 - **Inputs**: Simple, clearly defined input fields
 - **Spacing**: Consistent 8px grid system for precise alignment
-
-### Playful Elements
-- **Pi Slice Characters**: Each Pi Slice (0-9) has a subtle, minimalist "personality"
-  - Simple expressions using just dots and lines
-  - Subtle animations on hover/interaction
-  - The personalities become more pronounced on special/famous Pi Slice
-- **Micro-interactions**: 
-  - Pi Slice subtly react when searched or selected
-  - Playful success animations when purchasing (confetti that quickly fades)
-  - Smooth transitions between states
-
-### Featured Pi Slice Display
-- Grid of Pi Slice with subtle personality indicators
-- Special/famous Pi Slice glow softly or have subtle animated backgrounds
-- Clean data visualization showing Pi Slice position in Pi sequence
 
 ### Mobile Experience
 - Touch targets optimized for mobile (minimum 44px)
