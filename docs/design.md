@@ -38,7 +38,6 @@
 
 1. Home Page (`/`)
    - Top Menu:
-     - Pi Gallery
      - Pi Explorer
      - Login
    - Ticker bar showing app stats
@@ -52,7 +51,7 @@
      - Total Value Locked (USD Estimate - Sum of purchase prices)
      - Most Recently Added Ad
      - Random NFTs Minted by buysomepi.com
-   - Search box for finding specific Pi Slice
+   - Find Some Pi button links to Pi Explorer Page
    - Buy Some Pi button (select tier > purchase > provide ad content > checkout flow > display NFT at unique URL)
    - NFT Cards Navigation (Previous, Latest, Featured, Random, Next)
    - Bottom Menu:
@@ -60,15 +59,7 @@
      - Terms
      - Contact
 
-2. Pi Gallery (`/gallery`)
-   - Pi Gallery (paged results, filterable, searchable)
-   - NFT Cards Navigation (Previous, Latest, Featured, Random, Next)
-   - Bottom Menu:
-     - FAQ
-     - Terms
-     - Contact
-
-3. Pi Explorer Page (`/explore`)
+2. Pi Explorer Page (`/explore`)
    - Various ways to search for, find, and explore the pi digits
    - Helps users find and then purchase (with inline CTA) the high-value pi NFTs
    - Helps users find and then purchase (with inline CTA) birthdays, personal numbers, patterns, etc.
@@ -80,13 +71,13 @@
      - Terms
      - Contact
 
-4. User Dashboard (`/dashboard`)
+3. User Dashboard (`/dashboard`)
    - Owned Pi Slice
    - Ad management
    - Transaction history
    - NFT Cards (Previous, Latest, Featured, Random, Next)
 
-5. Admin Panel (`/admin`)
+4. Admin Panel (`/admin`)
    - Ad moderation dashboard
    - Support dashboard
    - User management
