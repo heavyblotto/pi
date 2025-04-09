@@ -8,35 +8,27 @@
 
 ## How it works
 
-- buysomepi.com is the URL for the app Buy Some Pi
-- Users can purchase a Pi Slice (Buy some Pi) for 1 USD (1 million NFTs decimal places from zero available)
-- Each purchase mints a SOL-based NFT
-  - 50% chance that buysomepi.com mints our own randomly selected NFT
+- Buy Some Pi (https://www.buysomepi.com) is the URL for the app
+- Users can purchase a Pi Slice (a decimal position of pi) for a fixed price based on supply of 314,159 Solana-based NFTs 
+
+| Tier              | Price    | Features                              | Example Positions        |
+|-------------------|----------|---------------------------------------|--------------------------|
+| **Random**        | $1.00    | Random slice from available pool      | 89793, 23846             |
+| **Standard**      | $3.14    | Slice from available pool             | 352925, 57988            |
+| **Patterned**     | $6.28    | Repeating digits (e.g., 11111)        | 33333, 88888             |
+| **Mathematical**  | $31.41   | Prime positions, Fibonacci sequences  | 541 (100th prime), 1597  |
+| **Cultural**      | $159.99  | Meme numbers (69, 420), years (1969)  | 31415, 1337              |
+| **Ultra-Rare**    | $314.15  | First 1000 digits, famous constants   | 1415, 26535              |
+
+- 50% chance that buysomepi.com mints our own randomly selected NFT with each user purchase
+- Each **Standard** purchase for $3.14 enables a user to select an available standard Pi digit
+- Each **Patterned** purchase for $6.28 enables a user to select an available repeating digit sequence
+- NFT minted at time of purchase
 - NFT entitles purchaser to advertise on the Pi Gallery
   - All ads subject to review
-  - Ads can be anything (ads, artwork, message)
+  - Ads limited to 140-character text with emoji support. 
+  - No links, adult content, filter for bad words, auto-rejected if attempted with no refunds
 - Resale of NFT transfers right to place ad in Pi Gallery
-
-## User Experience
-
-### User Flows
-
-- go to buysomepi.com (omptimized for mobile)
-- landing page shows:
-  - "Buy Some Pi" CTA, with field to enter in Pi decimal location (index value)
-    - If not available, shows purchased NFT in gallery
-  - "Search for Pi", with search for Pi decimal location, or advanced search for keys, values, combinations, etc.
-    - Canned searches for interesting Pi locations
-    - Filter by: sold, available, most recent
-    - Search results show either purchased NFT in gallery or CTA to "Purchase Pi"
-    - If purchased and running an ad, show ad
-- landing page also shows:
-  - most recent NFT purchase
-  - most recent ad
-  - NFT gallery (ads)
-    - Premium NFTs
-    - Then the Pi Gallery
-       - displays results in sequence, pages with 314 results per page, with search to filter by index or value at index
 
 ### Frontend Pages
 
