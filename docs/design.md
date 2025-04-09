@@ -23,15 +23,24 @@
 - Each **Standard** purchase for $3.14 enables a user to select an available standard Pi digit
 - Each **Patterned** purchase for $6.28 enables a user to select an available repeating digit sequence
 - NFT minted at time of purchase
+- Ads and NFT uniquely-generated image and meta-data stored on-chain
 - NFT entitles purchaser to advertise on the Pi Gallery
   - All ads subject to review
   - Ads limited to 140-character text with emoji support. 
   - No links, adult content, filter for bad words, auto-rejected if attempted with no refunds
 - Resale of NFT transfers right to place ad in Pi Gallery
 
+## NFT Set Design
+
+
+
 ### Frontend Pages
 
 1. Home Page (`/`)
+   - Top Menu:
+     - Pi Gallery
+     - Pi Explorer
+     - Login
    - Ticker bar showing app stats
      - Total Pi Slices Sold
      - Pi Slices Remaining
@@ -45,25 +54,61 @@
      - Random NFTs Minted by buysomepi.com
    - Search box for finding specific Pi Slice
    - Buy Some Pi button (select tier > purchase > provide ad content > checkout flow > display NFT at unique URL)
+   - NFT Cards Navigation (Previous, Latest, Featured, Random, Next)
+   - Bottom Menu:
+     - FAQ
+     - Terms
+     - Contact
+
+2. Pi Gallery (`/gallery`)
    - Pi Gallery (paged results, filterable, searchable)
    - NFT Cards Navigation (Previous, Latest, Featured, Random, Next)
+   - Bottom Menu:
+     - FAQ
+     - Terms
+     - Contact
 
-2. User Dashboard (`/dashboard`)
+3. Pi Explorer Page (`/explore`)
+   - Various ways to search for, find, and explore the pi digits
+   - Helps users find and then purchase (with inline CTA) the high-value pi NFTs
+   - Helps users find and then purchase (with inline CTA) birthdays, personal numbers, patterns, etc.
+   - Provides content about Pi digits with inline CTA to purchase
+   - Interspersed with NFT ads related to the users exploration
+   - NFT Cards Navigation (Previous, Latest, Featured, Random, Next)
+   - Bottom Menu:
+     - FAQ
+     - Terms
+     - Contact
+
+4. User Dashboard (`/dashboard`)
    - Owned Pi Slice
    - Ad management
    - Transaction history
    - NFT Cards (Previous, Latest, Featured, Random, Next)
 
-3. Admin Panel (`/admin`)
-   - Ad moderation queue
+5. Admin Panel (`/admin`)
+   - Ad moderation dashboard
+   - Support dashboard
    - User management
-   - Pi Slice reservation tool
+   - Mint tool
    - Analytics dashboard
+   - Stripe dashboard
 
-4. Terms of Service Page (`/terms`)
+5. Terms of Service Page (`/terms`)
 
-5. FAQ Page (`/faq`)
+   - NFT Cards Navigation (Previous, Latest, Featured, Random, Next)
+   - Bottom Menu:
+     - FAQ
+     - Terms
+     - Contact
 
+6. FAQ Page (`/faq`)
+
+   - NFT Cards Navigation (Previous, Latest, Featured, Random, Next)
+   - Bottom Menu:
+     - FAQ
+     - Terms
+     - Contact
 ## Revenue
 
 - Primary sales per NFT + 5% secondary market royalties on all NFT resales.
@@ -76,7 +121,7 @@
 - Backend: Next.js API routes (serverless functions) with Vercel Edge Functions
 - Database: Vercel Postgres
 - Authentication: WalletConnect (for NFT owners), Clerk.com (for advertisers)
-- Blockchain: Solana with Metaplex Candy Machine
+- Blockchain: Solana with Metaplex Candy Machine, on-chain media storage (IPFS, etc.)
 - Infrastructure: Vercel Pro (leveraging built-in image optimization)
 - Content Moderation: Hive Moderation API
 - Payments: Stripe, Solana wallet transactions
